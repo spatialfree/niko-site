@@ -5,58 +5,150 @@
   <title>Niko Ryan</title>
   <meta name="description" content="Niko Ryan's personal website.">
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 </head>
 
 <body>
-  <div class="banner">
-    <p><span style="font-size: 24px;">Hi,</span><br> I am known as</p>
-    <h1>opendegree</h1>
-    <p style="text-align: left;">and in the mortal plane <b>Niko Ryan</b></p>
-  </div>
-  <h2>here's what i do:</h2>
-  <br>
-  <div>
-    <a href="https://dofdev.org" target="blank">
-      <div class="link">
-        <img src="/res/dofdev-icon.svg" width="48px">
-        <h2>dofdev</h2>
-      </div>
-    </a>
-    <p><b>co-founder and designer</b></p>
-    <p>making spatial interaction mechanics like this: </p>
-    <video width="360px" autoplay loop style="mix-blend-mode: hard-light;">
-      <source src="/res/cubic-flow.mp4" type="video/mp4">
-    </video>
-  </div>
-  <br>
-  <div>
-    <a href="https://twitter.com/opendegree" target="blank">
-      <div class="link">
-        <img src="/res/twitter-icon.svg" width="48px">
-        <h2>twitter</h2>
-      </div>
-    </a>
-  </div>
-  <br>
-  <div>
-    <a href="https://www.linkedin.com/in/niko-mcavoy-a38998180/" target="blank">
-      <div class="link">
-        <img src="/res/linkedin-icon.svg" width="48px">
-        <h2>linkedin</h2>
-      </div>
-    </a>
-  </div>
 
-  <br><br>
-  <model-viewer
-  alt=""
-  src="/res/bezrahedron.glb" ar ar-modes="webxr scene-viewer quick-look"
-  shadow-intensity="1" camera-controls></model-viewer>
-  <h2>bezrahedron</h2>
-  
-</body>
+<div style='
+  pointer-events: none;
+  z-index: -1;
+
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  background-image: url("/res/steeples.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+'></div>
+
+<div style='height: 44dvh;'></div>
+
+<h1>Niko Ryan</h1>
+<p style='
+  text-align: center;
+'>
+  opening new degrees of freedom
+  <br>
+  <a href='https://dofdev.org' target='_blank'>@dofdev</a>
+</p>
+
+<div style='height: 16px;'></div>
+
+<a href='https://dofdev.org' target='_blank'>
+  <img src="/res/dofdev-icon.svg" width="64px">
+</a>
+
+<div style='height: 24px;'></div>
+
+<div style='
+  display: flex;
+  gap: 32px;
+'>
+  <a href="https://twitter.com/opendegree" target="blank">
+    <img src="/res/twitter-icon.svg" width="32px">
+  </a>
+  <a href="https://www.linkedin.com/in/niko-mcavoy-a38998180/" target="blank">
+    <img src="/res/linkedin-icon.svg" width="32px">
+  </a>
+</div>
+
+<div style='height: 64px;'></div>
+
+<div style='
+  width: 320px;
+  height: 180px;
+  position: relative;
+'>
+  <iframe width="320" height="180" src="https://www.youtube.com/embed/ZkwL5IzYCp8" title="FOSS XR Conference 2022 - Day 2 - October 6th, 2022" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  <!-- cover -->
+  <div style='
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url("/res/fossxr.png");
+    background-size: cover;
+    z-index: 1;
+    top: 0;
+    cursor: pointer;
+  ' onclick='close_cover(this)'>
+    <img src='/res/play.svg' style='
+      position: absolute;
+      z-index: 2;
+      top: 75%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 32px;
+      height: 32px;
+      pointer-events: none;
+    '>
+  </div>
+</div>
+<script>
+close_cover = (el) => {
+  el.style.display = 'none'
+}
+</script>
+
+<div style='height: 16px;'></div>
+
+
+<div style='height: 64px;'></div>
+
+<h2>References</h2>
+<div style='
+  text-align: center;
+'>
+<div class='peer'>Bryan Chris Brown</div>
+<div class='feats'>looking glass, project northstar, fossxr</div>
+
+<div class='peer'>Dylan Urquidi</div>
+<div class='feats'>unity spatial experience architect</div>
+
+<div class='peer'>JCorvinus</div>
+<div class='feats'>xr designer, vrchat</div>
+
+<div class='peer'>Nova King</div>
+<div class='feats'>stardustxr</div>
+
+<div class='peer'>Pip Turner</div>
+<div class='feats'>ultraleap senior xr interaction engineer</div>
+</div>
+
+<div style='height: 64px;'></div>
+
+<h2>🏆</h2>
+<p style='text-align: center;'>
+  Placed 10th in the vr game jam 2021<br>as seen in <a href='https://youtu.be/wLrJ7t1wYBA?t=244' target='_blank'>Valem's video</a>
+</p>
+
+
+<model-viewer
+alt=""
+src="/res/bezrahedron.glb" ar ar-modes="webxr scene-viewer quick-look"
+shadow-intensity="1" camera-controls></model-viewer>
+<h2>bezrahedron</h2>
+
+<div style='height: 64px;'></div>
+
+<footer style='text-align: center;'>thanks for visiting 💚</footer>
+
+<div style='height: 32px;'></div>
+
+
+<!-- smoke -->
+<video width="100%" autoplay muted loop style='
+  pointer-events: none;
+  mix-blend-mode: exclusion;
+  opacity: 0.333;
+  position: fixed;
+  bottom: 0;
+'>
+  <source src="/res/smoke.mp4" type="video/mp4">
+</video>
+
 
 <style>
   /* @import url('https://fonts.googleapis.com/css2?family=Hahmlet&display=swap'); */
@@ -81,35 +173,49 @@
     margin: 0 auto;
     padding: 0;
     max-width: 800px;
-    padding-bottom: 10rem;
     font-family: 'Lato', sans-serif;
     color: var(--gray);
+
+    text-wrap: balance;
   }
   h1, h2, p {
-    margin: 0 1rem;
+    margin-top: 0;
+    margin-bottom: 8px;
   }
   h1 {
-    margin-top: 0;
-    margin-bottom: 1rem;
     font-size: 48px;
     font-weight: 500;
     letter-spacing: 2px;
-    color: var(--color);
+    color: var(--light);
   }
   h2 {
-    margin-bottom: 0.5rem;
+    font-size: 32px;
     font-weight: 400;
+    color: var(--light);
   }
   p {
-    margin-bottom: 0.5rem;
+    line-height: 1.5;
+    font-size: 18px;
+    color: var(--white);
   }
   a {
-    color: #4d7aaa;
+    color: var(--light);
     text-decoration: none;
+    cursor: pointer;
   }
   .banner {
     margin: 4rem 0;
     border-bottom: 1px solid var(--gray);
+  }
+  .peer {
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--color);
+    margin: 0;
+  }
+  .feats {
+    opacity: 0.5;
+    margin-bottom: 1rem;
   }
   .link {
     display: flex;
@@ -138,5 +244,9 @@
   @media screen and (max-width: 800px) {
 
   }
+
+  /* hide scrollbar */
+  ::-webkit-scrollbar {
+    display: none;
+  }
 </style>
-</html>
